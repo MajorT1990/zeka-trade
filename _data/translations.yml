@@ -1,0 +1,17 @@
+# Navigation menu
+menu:
+  default:
+    en:
+      - title: Home
+        url: /en/
+      - title: Contact
+        url: /en/contact/
+      - title: About
+        url: /en/about/
+    sq:
+      - title: Shtëpi
+        url: /sq/
+      - title: Kontaktoni
+        url: /sq/contact/
+      - title: Rreth
+        url: /sq/about/

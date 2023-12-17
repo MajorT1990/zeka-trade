@@ -1,0 +1,68 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/html-grid';
+@import url("font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
+
+$pattern-background-size: 25em;
+
+
+#my-banner {
+  background-image: url('images/dark-tr.svg'), url('images/light-br.svg'), url('images/overlay.png'), url('../images/banner.jpg');
+  background-position: bottom left, bottom right, top left, top center;
+  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+  background-size: $pattern-background-size, $pattern-background-size, auto, cover;
+  color: _palette(banner, fg);
+  cursor: default;
+  padding: 6em 0;
+  text-align: center;
+
+  .my-inner {
+    @include vendor('animation', 'reveal-banner 1s 0.25s ease-in-out');
+    @include vendor('animation-fill-mode', 'forwards');
+    background: transparentize(#182754, 0.5);
+    color: #ffffff;
+    display: inline-block;
+    opacity: 0;
+    padding: 3em;
+    text-align: center;
+
+    header {
+      display: inline-block;
+      border-bottom: solid 2px;
+      border-top: solid 2px;
+      margin: 0 0 2em 0;
+      padding: 3px 0 3px 0;
+
+      h2 {
+        border-bottom: solid 2px;
+        border-top: solid 2px;
+        font-size: 2.5em;
+        font-weight: 900;
+        letter-spacing: 0.2em;
+        margin: 0;
+        padding-left: 0.05em;
+        position: relative;
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      letter-spacing: 0.1em;
+      margin: 0;
+      text-transform: uppercase;
+
+      a {
+        color: inherit;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+
+    footer {
+      margin: 2em 0 0 0;
+    }
+  }
+}
